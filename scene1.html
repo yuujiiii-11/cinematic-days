@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Scene 1：記憶の中の光</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1s ease-out both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .scene {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 16px;
+      color: #aaa;
+      margin-bottom: 40px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .gallery figure {
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease-out forwards;
+    }
+
+    .gallery figure:nth-child(1) { animation-delay: 0.3s; }
+    .gallery figure:nth-child(2) { animation-delay: 0.6s; }
+    .gallery figure:nth-child(3) { animation-delay: 0.9s; }
+    .gallery figure:nth-child(4) { animation-delay: 1.2s; }
+    .gallery figure:nth-child(5) { animation-delay: 1.5s; }
+    .gallery figure:nth-child(6) { animation-delay: 1.8s; }
+    .gallery figure:nth-child(7) { animation-delay: 2.1s; }
+    .gallery figure:nth-child(8) { animation-delay: 2.4s; }
+    .gallery figure:nth-child(9) { animation-delay: 2.7s; }
+
+    @keyframes slideUpImage {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gallery img {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpImage 1s ease-out forwards;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+     /* 各画像に個別のアニメーションディレイを適用 */
+     /* 例：キャプションに個別のディレイを設定 */
+     .gallery figure:nth-child(1) figcaption { animation-delay: 0.4s; }
+     .gallery figure:nth-child(2) figcaption { animation-delay: 0.7s; }
+     .gallery figure:nth-child(3) figcaption { animation-delay: 1.0s; }
+     .gallery figure:nth-child(4) figcaption { animation-delay: 1.3s; }
+     .gallery figure:nth-child(5) figcaption { animation-delay: 1.6s; }
+     .gallery figure:nth-child(6) figcaption { animation-delay: 1.9s; }
+     .gallery figure:nth-child(7) figcaption { animation-delay: 2.2s; }
+     .gallery figure:nth-child(8) figcaption { animation-delay: 2.5s; }
+     .gallery figure:nth-child(9) figcaption { animation-delay: 2.8s; }
+      
+
+    .gallery figcaption {
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #ccc;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+      animation-delay: 0.8s;
+    }
+
+    .gallery figcaption .en {
+      display: block;
+      font-size: 13px;
+      color: #777;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <section class="scene">
+    <h2>Scene 1：記憶の中の光</h2>
+    <p class="intro">光と影の移ろいに、心の記憶を重ねて。</p>
+
+    <div class="gallery">
+      <figure>
+        <img class="fade-img" src="scene1_images/scene1_01.jpeg" alt="scene1_01">
+        <figcaption>朝のはじまり、足元から光が差し込む。<span class="en">Morning begins, light creeps from my feet.</span></figcaption>
+      </figure>
+      <figure>
+        <img class="fade-img" src="scene1_images/scene1_04.jpeg" alt="scene1_04">
+        <figcaption>壁に揺れる葉の影、まだ誰の気配もない。<span class="en">Leaves flicker on the wall—no one’s presence yet.</span></figcaption>
+      </figure>
+      <figure>
+        <img class="fade-img" src="scene1_images/scene1_02.jpeg" alt="scene1_02">
+        <figcaption>道に映る影は、昨日を引きずっているようだった。<span class="en">The shadows on the road still carry yesterday.</span></figcaption>
+      </figure>
+      <figure>
+        <img class="fade-img" src="scene1_images/scene1_05.jpeg" alt="scene1_05">
+        <figcaption>午後の空気が、プラスチックを金色に変えた。<span class="en">Afternoon air turned plastic into gold.</span></figcaption>
+      </figure>
+      <figure>
+        <img class="fade-img" src="scene1_images/scene1_06.jpeg" alt="scene1_06">
+        <figcaption>曇ったガラス越しの灯りが、心の中を照らす。<span class="en">Lights through fogged glass warmed my heart.</span></figcaption>
+      </figure>
+      <figure>
+        <img class="fade-img" src="scene1_images/scene1_03.jpeg" alt="scene1_03">
+        <figcaption>交差点を渡るその人も、光の一部だった。<span class="en">The person crossing was part of the light too.</span></figcaption>
+      </figure>
+      <figure>
+        <img class="fade-img" src="scene1_images/scene1_07.jpeg" alt="scene1_07">
+        <figcaption>歩道の先、すれ違う影と気配が静かに揺れていた。<span class="en">Beyond the sidewalk, passing shadows and presence gently stirred.</span></figcaption>
+      </figure>
+      <figure>
+        <img class="fade-img" src="scene1_images/scene1_08.jpeg" alt="scene1_08">
+        <figcaption>もう届かない光が、壁にそっと影を残した。<span class="en">Light that can no longer reach leaves a gentle shadow behind.</span></figcaption>
+      </figure>
+      <figure>
+        <img class="fade-img" src="scene1_images/scene1_09.jpeg" alt="scene1_09">
+        <figcaption>花びらが、静かに今日を締めくくる。<span class="en">A petal quietly closes the day.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>日常のすきま</title>
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: url("nichijou_images/bg_blurred.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      backdrop-filter: blur(8px);
+      background-color: rgba(0,0,0,0.4);
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
+    h1 {
+     text-align: center;
+     font-size: 36px;
+     margin-top: 40px;
+     margin-bottom: 20px;
+     color: #fff;
+     font-family: 'Yomogi', cursive;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      opacity: 0;
+      transform: scale(0.9);
+      animation: fadeInZoom 1s forwards;
+      cursor: pointer;
+    }
+
+    @keyframes fadeInZoom {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>日常のすきま</h1>
+    <div class="gallery">
+      <img src="nichijou_images/20250422-DSCF8910.jpg" alt="nichijou_01">
+      <img src="nichijou_images/32244192-C3BA-4D89-985E-D87D276273FF.jpeg" alt="nichijou_02">
+      <img src="nichijou_images/7ACAC8D5-09C8-41E2-B621-60B764B0038B.jpeg" alt="nichijou_03">
+      <img src="nichijou_images/84411237-6988-4D55-A686-90BCA6D81BED.jpeg" alt="nichijou_04">
+      <img src="nichijou_images/9A1C35F1-866C-4304-A364-DFEBB6399B7E.jpeg" alt="nichijou_05">
+      <img src="nichijou_images/A64B09B8-9D6F-4E5B-BD67-569F85695291.jpeg" alt="nichijou_06">
+      <img src="nichijou_images/B6DA3AED-30C4-4AA9-9B35-EA1C16D41B10.jpeg" alt="nichijou_07">
+      <img src="nichijou_images/C42BC98E-CFFA-4619-BDC1-A3EB5ADAE39C.jpeg" alt="nichijou_08">
+      <img src="nichijou_images/C6B1E0D1-00F7-448D-AA00-9D5A32D05836.jpeg" alt="nichijou_09">
+      <img src="nichijou_images/EF1904C8-C52E-4BDB-9EB9-5BAFA85D8DA8.jpeg" alt="nichijou_10">
+      <img src="nichijou_images/nichijou_01.jpeg" alt="nichijou_11">
+      <img src="nichijou_images/nichijou_02.jpeg" alt="nichijou_12">
+      <img src="nichijou_images/nichijou_03.jpeg" alt="nichijou_13">
+      <img src="nichijou_images/nichijou_04.jpeg" alt="nichijou_14">
+      <img src="nichijou_images/nichijou_05.jpeg" alt="nichijou_15">
+      <img src="nichijou_images/nichijou_06.jpeg" alt="nichijou_16">
+      <img src="nichijou_images/nichijou_07.jpeg" alt="nichijou_17">
+      <img src="nichijou_images/nichijou_08.jpeg" alt="nichijou_18">
+      <img src="nichijou_images/nichijou_09.jpeg" alt="nichijou_19">
+      <img src="nichijou_images/nichijou_10.jpeg" alt="nichijou_20">
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <script>
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      });
+    });
+    document.querySelector('.close').onclick = function () {
+      document.getElementById('modal').style.display = "none";
+    };
+    document.getElementById('modal').onclick = function (e) {
+      if (e.target.id === 'modal') {
+        document.getElementById('modal').style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>

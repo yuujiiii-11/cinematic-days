@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Cinematic Days</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      margin: 0; padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px;
+      background-image: url('images/header-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.2s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header h1 {
+      font-size: 64px;
+      font-weight: 800;
+      background-image: url('images/DSF8994.jpg');
+      background-size: cover;
+      background-position: top center;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    header p {
+      font-family: 'Yomogi', cursive;
+      font-size: 18px;
+      color: #aaa;
+      position: relative;
+      z-index: 1;
+    }
+    nav {
+      text-align: center;
+      background-color: #222;
+      padding: 10px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.2s ease-out forwards;
+      animation-delay: 0.6s;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+    nav a:hover { color: #fff; }
+    .section-link {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.2s ease-out forwards;
+      animation-delay: 1s;
+    }
+    .section-link figure {
+      max-width: 300px;
+      text-align: center;
+    }
+    .section-link img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s;
+    }
+    .section-link img:hover {
+      transform: scale(1.05);
+    }
+    .section-link figcaption {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.4;
+    }
+    .section-link figcaption strong {
+      font-size: 18px;
+      color: #ffcc99;
+      display: block;
+      letter-spacing: 1px;
+    }
+    .section-link figcaption .subtitle {
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cinematic Days</h1>
+    <p>日常にある、映画のような瞬間を。</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="scene1.html">Scene 1</a> |
+    <a href="scene2.html">Scene 2</a> |
+    <a href="scene3.html">Scene 3</a> |
+    <a href="nichijou.html">日常のすきま</a> |
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="section-link">
+    <figure>
+      <a href="scene1.html"><img src="images/scene1_thumb.jpg" alt="Scene 1"></a>
+      <figcaption>
+        <strong>Scene 1</strong>
+        記憶の中の光
+        <div class="subtitle">Light in Memory</div>
+      </figcaption>
+    </figure>
+    <figure>
+      <a href="scene2.html"><img src="images/scene2_thumb.jpg" alt="Scene 2"></a>
+      <figcaption>
+        <strong>Scene 2</strong>
+        通り過ぎる日々
+        <div class="subtitle">Passing Days</div>
+      </figcaption>
+    </figure>
+    <figure>
+      <a href="scene3.html"><img src="images/scene3_thumb.jpg" alt="Scene 3"></a>
+      <figcaption>
+        <strong>Scene 3</strong>
+        ほどける街、踊る心
+        <div class="subtitle">A City Unraveling, A Dancing Heart</div>
+      </figcaption>
+    </figure>
+    <figure>
+      <a href="nichijou.html"><img src="images/gap_thumb.jpg" alt="日常のすきま"></a>
+      <figcaption>日常のすきま</figcaption>
+    </figure>
+  </div>
+</body>
+</html>

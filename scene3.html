@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Scene 3：ほどける街、踊る心</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1s ease-out both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .scene {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 16px;
+      color: #aaa;
+      margin-bottom: 40px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .gallery figure {
+      text-align: center;
+      opacity: 0;
+      animation: zoomIn 1.2s ease-out forwards;
+    }
+
+    .gallery figure:nth-child(1) { animation-delay: 0.3s; }
+    .gallery figure:nth-child(2) { animation-delay: 0.6s; }
+    .gallery figure:nth-child(3) { animation-delay: 0.9s; }
+    .gallery figure:nth-child(4) { animation-delay: 1.2s; }
+    .gallery figure:nth-child(5) { animation-delay: 1.5s; }
+    .gallery figure:nth-child(6) { animation-delay: 1.8s; }
+    .gallery figure:nth-child(7) { animation-delay: 2.1s; }
+    .gallery figure:nth-child(8) { animation-delay: 2.4s; }
+    .gallery figure:nth-child(9) { animation-delay: 2.7s; }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery figcaption {
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .gallery figcaption .en {
+      display: block;
+      font-size: 13px;
+      color: #777;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <section class="scene">
+    <h2>Scene 3：ほどける街、踊る心</h2>
+    <p class="intro">夕暮れが街を包み、心のざわめきが踊りだす。</p>
+
+    <div class="gallery">
+      <figure>
+        <img src="scene3_images/scene3_01.jpeg" alt="scene3_01">
+        <figcaption>午後三時の路地裏。影たちは並んで、誰かを待っているみたいだった。<span class="en">3 p.m. in a back alley. The shadows stood side by side, as if quietly waiting for someone.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene3_images/scene3_02.jpeg" alt="scene3_02">
+        <figcaption>沈む太陽が、光を振り絞って都市を照らしていた。<span class="en">沈む太陽が、光を振り絞って都市を照らしていた。</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene3_images/scene3_03.jpeg" alt="scene3_03">
+        <figcaption>光が編んだ模様の中を、誰かが静かに通り過ぎた。<span class="en">Someone passed quietly through the pattern woven by light.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene3_images/scene3_04.jpeg" alt="scene3_04">
+        <figcaption>人の流れに紛れて歩く。今日という日が、静かに背中を押してくる。<sOn the edpan class="en">I walk among the crowd, as the day gently nudges me home.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene3_images/scene3_05.jpeg" alt="scene3_05">
+        <figcaption>ビルの狭間に沈む夕日が、最後のメロディを奏でていた。<span class="en">The sunset between buildings played its final melody.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene3_images/scene3_06.jpeg" alt="scene3_06">
+        <figcaption>点りはじめた明かりが、心の奥を照らす。<span class="en">The lights beginning to glow reached deep into my heart.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene3_images/scene3_07.jpeg" alt="scene3_07">
+        <figcaption>ゆっくりと夜に染まる街が、踊っているように見えた。<span class="en">The city, slowly dyed in night, looked like it was dancing.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene3_images/scene3_08.jpeg" alt="scene3_08">
+        <figcaption>通り過ぎる光が、今日の記憶をふわりと連れて行く。<span class="en">Passing lights gently carried away the memory of today.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene3_images/scene3_09.jpeg" alt="scene3_09">
+        <figcaption>明け方じゃなくて、終わりきらない夜の気配。
+          いつまでも醒めない夢みたいな街が、まだここにいる。<span class="en">Not quite dawn, just a night refusing to end.
+            This city—like a dream that won’t wake—still lingers here.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+</body>
+</html>

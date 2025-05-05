@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Scene 2：通り過ぎる日々</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    .scene {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 16px;
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    figure {
+      margin: 0;
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideInLeft 1s ease-out forwards;
+    }
+
+    figure:nth-child(even) {
+      transform: translateX(50px);
+      animation-name: slideInRight;
+    }
+
+    figure:nth-child(1) { animation-delay: 0.2s; }
+    figure:nth-child(2) { animation-delay: 0.4s; }
+    figure:nth-child(3) { animation-delay: 0.6s; }
+    figure:nth-child(4) { animation-delay: 0.8s; }
+    figure:nth-child(5) { animation-delay: 1.0s; }
+    figure:nth-child(6) { animation-delay: 1.2s; }
+    figure:nth-child(7) { animation-delay: 1.4s; }
+    figure:nth-child(8) { animation-delay: 1.6s; }
+
+    @keyframes slideInLeft {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    figcaption {
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    figcaption .en {
+      display: block;
+      font-size: 13px;
+      color: #777;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <section class="scene">
+    <h2>Scene 2：通り過ぎる日々</h2>
+    <p class="intro">通り過ぎる瞬間に宿る、静かな感情を記録する。</p>
+    <div class="gallery">
+      <figure>
+        <img src="scene2_images/scene2_01.jpeg" alt="scene2_01">
+        <figcaption>午後の陽だまりが、静けさを包み込んでいた。<span class="en">Afternoon sunlight wrapped the quietness.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene2_images/scene2_02.jpeg" alt="scene2_02">
+        <figcaption>見慣れた交差点が、今日だけ違って見えた。<span class="en">The familiar crossing looked different today.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene2_images/scene2_03.jpeg" alt="scene2_03">
+        <figcaption>時間だけが、前に進んでいる気がした。<span class="en">Only time seemed to move forward.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene2_images/scene2_04.jpeg" alt="scene2_04">
+        <figcaption>視線の先にあったのは、誰かの気配だった。<span class="en">A presence lingered just ahead of my gaze.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene2_images/scene2_05.jpeg" alt="scene2_05">
+        <figcaption>名もなき通過点に、今日という日が滲んでいた。<span class="en">In a nameless passing moment, the day quietly bled through.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene2_images/scene2_06.jpeg" alt="scene2_06">
+        <figcaption>ビルの隙間に、今日の名残が漂っていた。<span class="en">Traces of today drifted between buildings.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene2_images/scene2_07.jpeg" alt="scene2_07">
+        <figcaption>誰かがいた証を、光がそっと映していた。<span class="en">Light gently captured proof of someone's presence.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="scene2_images/scene2_08.jpeg" alt="scene2_08">
+        <figcaption>少し肌寒い午後、春が歩いているようだった。<span class="en">On a chilly afternoon, it felt like spring itself was walking.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+</body>
+</html>
